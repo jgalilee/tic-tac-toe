@@ -1,0 +1,7 @@
+{
+  "game": {
+    "won": " wins!",
+    "draw": "draw",
+    "turn": "'s turn"
+  }
+}

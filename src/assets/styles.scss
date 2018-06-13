@@ -1,0 +1,136 @@
+$width: 100%;
+$base: 8rem;
+$white: rgb(255, 255, 255);
+$navy-blue: rgb(0, 37, 62);
+$navy-blue-transparent: rgba(0, 37, 62, 0.75);
+$navy-blue-highlight: rgb(20, 57, 82);
+$light-grey: rgb(1, 183, 168);
+$light-grey-highlight: rgb(20, 203, 188);
+$grey: rgb(46, 49, 146);
+$grey-highlight: rgb(66, 69, 166);
+
+html, body {
+  height: $width;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: $navy-blue;
+}
+
+main {
+  height: $width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  section, footer {
+    position: relative;
+    width: auto;
+  }
+}
+
+a {
+  color: $navy-blue;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $navy-blue-highlight;
+  }
+}
+
+section {
+  aside {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+    background: $navy-blue-transparent;
+
+    a {
+      font-size: $base;
+      color: $white;
+    }
+  }
+}
+
+table {
+  a {
+    display: block;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  tr {
+    td {
+      width: $base;
+      height: $base;
+      font-size: $base / 2;
+
+      & *.nought {
+        font-weight: bold;
+      }
+    }
+
+    &:nth-child(odd) td {
+      &:nth-child(even) {
+        background: $light-grey;
+
+        &:hover {
+          background: $light-grey-highlight;
+        }
+      }
+
+      &:nth-child(odd) {
+        background: $grey;
+
+        &:hover {
+          background: $grey-highlight;
+        }
+      }
+    }
+
+    &:nth-child(even) td {
+      &:nth-child(odd) {
+        background: $light-grey;
+
+        &:hover {
+          background: $light-grey-highlight;
+        }
+      }
+
+      &:nth-child(even) {
+        background: $grey;
+
+        &:hover {
+          background: $grey-highlight;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: auto;
+  text-align: center;
+  font-weight: lighter;
+  font-size: $base / 2;
+  line-height: $base / 1.333;
+
+  span.nought {
+    font-weight: bold;
+  }
+
+  a {
+    display: block;
+  }
+}
