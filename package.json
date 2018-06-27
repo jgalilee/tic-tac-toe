@@ -6,7 +6,9 @@
   "dependencies": {
     "express": "latest",
     "i18n-react": "^0.6.4",
+    "jest-image-snapshot": "^2.4.3",
     "prop-types": "^15.6.1",
+    "puppeteer": "^1.5.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-proptypes": "^1.0.0",
